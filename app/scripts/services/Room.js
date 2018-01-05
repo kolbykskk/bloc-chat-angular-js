@@ -8,10 +8,7 @@
 
     Room.add = function(room) {
       var roomName = document.getElementById('roomName').value;
-      return Room.all.$add({
-        name: roomName,
-        value: roomName
-      });
+      return rooms.$add(roomName);
     }
 
     return Room;
