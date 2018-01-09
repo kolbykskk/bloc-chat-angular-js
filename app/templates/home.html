@@ -1,7 +1,9 @@
 <div class="sidebar">
-  <div ng-repeat="room in home.room">
-    <div>{{ room.$value }}</div>
+  <h1>Bloc Chat</h1>
+  <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
+  <div class="rooms">
+    <div ng-repeat="room in home.room">
+      <a class="room-link" href=""><div class="each-room">{{ room.$value }}</div></a>
+    </div>
   </div>
 </div>
-
-<button class="btn btn-primary" type="button" ng-click="openModal()">Open modal</button>

@@ -5,16 +5,7 @@
     $scope.openModal = function() {
       $uibModal.open({
         templateUrl: '/templates/modal.html',
-        controller: function($scope, $uibModalInstance) {
-          $scope.ok = function() {
-            $uibModalInstance.close();
-            Room.add();
-          };
-
-          $scope.cancel = function() {
-            $uibModalInstance.dismiss('cancel');
-          };
-        }
+        controller: 'ModalCtrl as modal'
       })
     };
   }
