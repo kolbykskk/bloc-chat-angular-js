@@ -1,9 +1,21 @@
 <div class="sidebar">
   <h1>Bloc Chat</h1>
-  <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
+  <button class="btn btn-primary" type="button" ng-click="home.openModal()">Create Room</button>
   <div class="rooms">
     <div ng-repeat="room in home.room">
-      <a class="room-link" href=""><div class="each-room">{{ room.$value }}</div></a>
+      <a class="room-link" href=""><div class="each-room" ng-click="home.activeRoom.name = room.$value; home.getByRoomId(room.$id)">{{ room.$value }}</div></a>
+    </div>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="room-name">
+    <h2>{{ home.activeRoom.name }}</h2>
+  </div>
+
+  <div class="messages">
+    <div ng-repeat="message in home.message">
+      <a class="message-link" href=""><div class="each-message">{{ message.$value }}</div></a>
     </div>
   </div>
 </div>

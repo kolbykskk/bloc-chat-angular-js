@@ -31,6 +31,7 @@ body {
   min-width: 235px;
   max-width: 450px;
   padding: 30px;
+  float: left;
 }
 
 .rooms {
@@ -69,4 +70,13 @@ h1 {
 .btn {
   float: right;
   margin: 5px;
+}
+
+.main-container {
+  width: 75%;
+  float: right;
+}
+
+.room-name {
+  padding: 30px;
 }
