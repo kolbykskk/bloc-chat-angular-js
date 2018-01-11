@@ -3,7 +3,9 @@
   <button class="btn btn-primary" type="button" ng-click="home.openModal()">Create Room</button>
   <div class="rooms">
     <div ng-repeat="room in home.room">
-      <a class="room-link" href=""><div class="each-room" ng-click="home.activeRoom.name = room.$value; home.getByRoomId(room.$id)">{{ room.$value }}</div></a>
+      <a class="room-link" href="">
+        <div class="each-room" ng-click="home.activeRoom.name = room.$value; home.getByRoomId(room.$id)">{{ room.$value }}</div>
+      </a>
     </div>
   </div>
 </div>
@@ -15,7 +17,11 @@
 
   <div class="messages">
     <div ng-repeat="message in home.message">
-      <a class="message-link" href=""><div class="each-message">{{ message.$value }}</div></a>
+      <div class="each-message">
+        <div class="each-message-username">{{ message.username }}</div>
+        <div class="each-message-time">{{ message.sentAt }}</div>
+        <div class="each-message-content">{{ message.content }}</div>
+      </div>
     </div>
   </div>
 </div>

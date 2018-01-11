@@ -3,8 +3,8 @@
     this.room = Room.all;
 
     this.getByRoomId = function(roomId) {
-      var getRoomId = Message.getByRoomId(roomId);
-      console.log(getRoomId);
+      Message.getByRoomId(roomId);
+      this.message = Message.roomOnly;
     };
 
     this.activeRoom = {
