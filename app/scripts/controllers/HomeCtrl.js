@@ -5,7 +5,12 @@
     this.getByRoomId = function(roomId) {
       Message.getByRoomId(roomId);
       this.message = Message.roomOnly;
+      Message.roomId = roomId;
     };
+
+    this.send = function(newMessage) {
+      Message.send(newMessage);
+    }
 
     this.activeRoom = {
       name: "Join a room!"
